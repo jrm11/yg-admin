@@ -18,7 +18,7 @@
                     </el-submenu>
                 </template>
                 <template v-else>
-                    <el-menu-item :index="item.index" >
+                    <el-menu-item :index="item.index">
                         <i :class="item.icon"></i>{{ item.title }}
                     </el-menu-item>
                 </template>
@@ -32,9 +32,10 @@
         data() {
             return {
                 items: [
+
                     {
-                        icon: 'el-icon-setting',
-                        index: 'readme',
+                        icon: 'fa fa-envelope',
+                        index: 'infoManage',
                         title: '信息管理',
                         subs: [
                             {
@@ -48,180 +49,180 @@
                         ]
                     },
                     {
-                        icon: 'el-icon-menu',
-                        index: '2',
+                        icon: 'fa fa-tasks',
+                        index: 'SZHouse',
                         title: '深圳房源管理',
                         subs: [
                             {
-                                index: 'basetable',
-                                title: '房源分类管理 | 添加'
+                                index: 'houseManage',
+                                title: '房源分类管理 '
                             },
                             {
-                                index: 'vuetable',
-                                title: '房源地址管理 | 添加'
+                                index: 'addressManage',
+                                title: '房源地址管理 '
                             },
                             {
-                                index: 'basetable',
+                                index: 'AddSecondHouse',
                                 title: '添加二手房源'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'addSecondAreaHouse',
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'basetable',
+                                index: 'addSecondAreaHouse',
                                 title: '添加二手学区房源'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'AddNewHouse',
                                 title: '添加新房源'
                             },
                             {
-                                index: 'basetable',
+                                index: 'AddNewType',
                                 title: '添加新户型'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'AddRentHouse',
                                 title: '添加租房房源'
                             }
                         ]
                     },
                     {
-                        icon: 'el-icon-menu',
-                        index: '2',
+                        icon: 'fa fa-tasks',
+                        index: 'DGHouse',
                         title: '东莞房源管理',
                         subs: [
                             {
-                                index: 'basetable',
-                                title: '房源分类管理 | 添加'
+                                index: 'houseManage',
+                                title: '房源分类管理 '
                             },
                             {
-                                index: 'vuetable',
-                                title: '房源地址管理 | 添加'
+                                index: 'addressManage',
+                                title: '房源地址管理 '
                             },
                             {
-                                index: 'basetable',
+                                index: 'AddSecondHouse',
                                 title: '添加二手房源'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'addSecondHouse',
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'basetable',
+                                index: 'addSecondAreaHouse',
                                 title: '添加二手学区房源'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'AddNewHouse',
                                 title: '添加新房源'
                             },
                             {
-                                index: 'basetable',
+                                index: 'AddNewType',
                                 title: '添加新户型'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'AddRentHouse',
                                 title: '添加租房房源'
                             }
                         ]
                     },
                     {
-                        icon: 'el-icon-menu',
-                        index: '2',
+                        icon: 'fa fa-tasks',
+                        index: 'HZHouse',
                         title: '惠州房源管理',
                         subs: [
                             {
-                                index: 'basetable',
-                                title: '房源分类管理 | 添加'
+                                index: 'houseManage',
+                                title: '房源分类管理 '
                             },
                             {
-                                index: 'vuetable',
-                                title: '房源地址管理 | 添加'
+                                index: 'addressManage',
+                                title: '房源地址管理 '
                             },
                             {
-                                index: 'basetable',
+                                index: 'AddSecondHouse',
                                 title: '添加二手房源'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'addSecondHouse',
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'basetable',
+                                index: 'addSecondAreaHouse',
                                 title: '添加二手学区房源'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'AddNewHouse',
                                 title: '添加新房源'
                             },
                             {
-                                index: 'basetable',
+                                index: 'AddNewType',
                                 title: '添加新户型'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'AddRentHouse',
                                 title: '添加租房房源'
                             }
                         ]
                     },
                     {
-                        icon: 'el-icon-menu',
-                        index: '2',
+                        icon: 'fa fa-tasks',
+                        index: 'ZSHouse',
                         title: '中山房源管理',
                         subs: [
                             {
-                                index: 'basetable',
-                                title: '房源分类管理 | 添加'
+                                index: 'houseManage',
+                                title: '房源分类管理 '
                             },
                             {
-                                index: 'vuetable',
-                                title: '房源地址管理 | 添加'
+                                index: 'addressManage',
+                                title: '房源地址管理 '
                             },
                             {
-                                index: 'basetable',
+                                index: 'AddSecondHouse',
                                 title: '添加二手房源'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'addSecondHouse',
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'basetable',
+                                index: 'addSecondAreaHouse',
                                 title: '添加二手学区房源'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'AddNewHouse',
                                 title: '添加新房源'
                             },
                             {
-                                index: 'basetable',
+                                index: 'AddNewType',
                                 title: '添加新户型'
                             },
                             {
-                                index: 'vuetable',
+                                index: 'AddRentHouse',
                                 title: '添加租房房源'
                             }
                         ]
                     },
                     {
-                        icon: 'el-icon-setting',
-                        index: '22',
+                        icon: 'fa fa-commenting',
+                        index: 'LeaveMsg',
                         title: '留言管理',
                         subs: [
                             {
-                                index: 'infoCol',
-                                title: '留言信息管理'
+                                index: 'MsgManage',
+                                title: '留言信息列表'
                             }
                         ]
                     },
                     {
-                        icon: 'el-icon-setting',
-                        index: '11',
+                        icon: 'fa fa-cog',
+                        index: 'ConfigManage',
                         title: '配置管理',
                         subs: [
                             {
-                                index: 'infoCol',
-                                title: '基本配置管理'
+                                index: 'baseConfigManage',
+                                title: '基本配置列表'
                             }
                         ]
                     },
@@ -251,17 +252,37 @@
         left: 0;
         top: 70px;
         bottom: 0;
-
-    ul {
+        overflow-y: auto;
+    }
+    .sider>ul {
         height: 100%;
     }
+    .el-menu-item {
+        background: #1f2d3d !important;
+    }
 
-    }
-    .el-menu-item{
-        background: #1f2d3d!important;
-    }
     .el-menu-item:hover, .el-menu-item:focus {
         background: #151f2a !important;
     }
+
+    /*修改elementUI 样式*/
+    .el-submenu .el-menu-item {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 50px !important;
+    }
+
+    .el-menu-item, .el-submenu__title {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    /*修改font-answe字体样式*/
+    .fa {
+        margin-right: 10px;
+    }
+
+
+
 </style>
 

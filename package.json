@@ -17,7 +17,10 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "element-ui": "^2.2.1",
+    "font-awesome": "^4.7.0",
+    "screenfull": "^3.3.2",
     "vue": "^2.5.2",
+    "vue-quill-editor": "^3.0.5",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
