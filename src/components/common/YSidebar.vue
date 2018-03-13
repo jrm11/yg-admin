@@ -11,9 +11,8 @@
                 <template v-if="item.subs">
                     <el-submenu :index="item.index">
                         <template slot="title"><i :class="item.icon"></i>{{ item.title }}</template>
-                        <el-menu-item v-for="(subItem,i) in item.subs" :key="i"
-                                      :index="subItem.index">{{ subItem.title
-                            }}
+                        <el-menu-item @click="click" v-for="(subItem,i) in item.subs" :key="i"
+                                      :index="subItem.index">{{ subItem.title}}
                         </el-menu-item>
                     </el-submenu>
                 </template>
@@ -32,7 +31,6 @@
         data() {
             return {
                 items: [
-
                     {
                         icon: 'fa fa-envelope',
                         index: 'infoManage',
@@ -70,7 +68,7 @@
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'addSecondAreaHouse',
+                                index: 'addSecondSchoolHouse',
                                 title: '添加二手学区房源'
                             },
                             {
@@ -105,11 +103,11 @@
                                 title: '添加二手房源'
                             },
                             {
-                                index: 'addSecondHouse',
+                                index: 'addSecondAreaHouse',
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'addSecondAreaHouse',
+                                index: 'addSecondSchoolHouse',
                                 title: '添加二手学区房源'
                             },
                             {
@@ -144,11 +142,11 @@
                                 title: '添加二手房源'
                             },
                             {
-                                index: 'addSecondHouse',
+                                index: 'addSecondAreaHouse',
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'addSecondAreaHouse',
+                                index: 'addSecondSchoolHouse',
                                 title: '添加二手学区房源'
                             },
                             {
@@ -183,11 +181,11 @@
                                 title: '添加二手房源'
                             },
                             {
-                                index: 'addSecondHouse',
+                                index: 'addSecondAreaHouse',
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'addSecondAreaHouse',
+                                index: 'addSecondSchoolHouse',
                                 title: '添加二手学区房源'
                             },
                             {
@@ -208,12 +206,6 @@
                         icon: 'fa fa-commenting',
                         index: 'LeaveMsg',
                         title: '留言管理',
-                        subs: [
-                            {
-                                index: 'MsgManage',
-                                title: '留言信息列表'
-                            }
-                        ]
                     },
                     {
                         icon: 'fa fa-cog',
@@ -235,6 +227,9 @@
             },
             handleClose(key, keyPath) {
                 console.log(key, keyPath);
+            },
+            click(){
+                // alert(111)
             }
         },
         computed: {
@@ -279,7 +274,7 @@
 
     /*修改font-answe字体样式*/
     .fa {
-        margin-right: 10px;
+        margin-right: 15px;
     }
 
 

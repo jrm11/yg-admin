@@ -14,13 +14,19 @@ import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 
-Vue.use(VueQuillEditor, /* { default global options } */)
+Vue.use(VueQuillEditor)
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
 Vue.prototype.$axios = axios;
 /* eslint-disable no-new */
+router.beforeEach((to,from,next)=>{
+
+        window.document.title = to.meta.title;
+        next();
+
+})
 new Vue({
   el: '#app',
   router,

@@ -20,6 +20,7 @@
     "font-awesome": "^4.7.0",
     "screenfull": "^3.3.2",
     "vue": "^2.5.2",
+    "vue-i18n": "^7.5.0",
     "vue-quill-editor": "^3.0.5",
     "vue-router": "^3.0.1"
   },

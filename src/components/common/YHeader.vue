@@ -21,7 +21,7 @@
     </div>
 </template>
 <script>
-    import screenFull from '../common/Screenfull/index'
+    import screenFull from '../Screenfull/index'
 
     export default {
         data() {

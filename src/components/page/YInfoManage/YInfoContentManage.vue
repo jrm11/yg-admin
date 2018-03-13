@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import breadNav from '../../common/bread'
+    import breadNav from '../../common/YBread'
     export default {
         data() {
             return {

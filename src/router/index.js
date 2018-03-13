@@ -11,7 +11,7 @@ export default new Router({
         },
         {
             path: '/readme',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
+            component: resolve => require(['../components/common/YHome.vue'], resolve),
             children: [
                 {
                     path: '/',
@@ -30,171 +30,75 @@ export default new Router({
         {
             // 深圳房源管理
             path: '/SZHouse',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
+            component: resolve => require(['../components/common/YHome.vue'], resolve),
             children: [
                 {
                     // 房源管理
                     path: '/houseManage',
-                    component: resolve => require(['../components/common/YClassifyManage.vue'], resolve)
+                    component: resolve => require(['../components/common/YClassifyManage.vue'], resolve),
+                    meta: {
+                        title: "房源管理"
+                    }
                 },
                 {
                     // 地址管理
                     path: '/addressManage',
-                    component: resolve => require(['../components/common/YAddressManage.vue'], resolve)
+                    component: resolve => require(['../components/common/YAddressManage.vue'], resolve),
+                    meta: {
+                        title: "地址管理"
+                    }
                 },
                 {
                     // 二手房
                     path: '/AddSecondHouse',
-                    component: resolve => require(['../components/common/YAddSecondHouse.vue'], resolve)
+                    component: resolve => require(['../components/common/YAddSecondHouse.vue'], resolve),
+                    meta: {
+                        title: "二手房"
+                    }
                 },
                 {
                     // 二手小区房
                     path: '/addSecondAreaHouse',
-                    component: resolve => require(['../components/common/YAddSecondAreaHouse.vue'], resolve)
+                    component: resolve => require(['../components/common/YAddSecondAreaHouse.vue'], resolve),
+                    meta: {
+                        title: "二手小区房"
+                    }
+                },
+                {
+                    // 二手学区房
+                    path: '/addSecondSchoolHouse',
+                    component: resolve => require(['../components/common/YAddSecondSchoolDistrictHouse.vue'], resolve),
+                    meta: {
+                        title: "二手学区房"
+                    }
                 },
                 {
                     // 新房
                     path: '/AddNewHouse',
-                    component: resolve => require(['../components/common/YAddNewHouse.vue'], resolve)
+                    component: resolve => require(['../components/common/YAddNewHouse.vue'], resolve),
+                    meta: {
+                        title: "新房"
+                    }
                 },
                 {
                     // 新户型
                     path: '/AddNewType',
-                    component: resolve => require(['../components/common/YAddNewType.vue'], resolve)
+                    component: resolve => require(['../components/common/YAddNewType.vue'], resolve),
+                    meta: {
+                        title: "新户型"
+                    }
                 },
                 {
                     // 租房
                     path: '/AddRentHouse',
-                    component: resolve => require(['../components/common/YAddRent.vue'], resolve)
+                    component: resolve => require(['../components/common/YAddRent.vue'], resolve),
+                    meta: {
+                        title: "租房"
+                    }
                 },
             ]
         },
-        {
-            // 东莞房源管理
-            path: '/DGHouse',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
-            children: [
-                {
-                    // 房源管理
-                    path: '/houseManage',
-                    component: resolve => require(['../components/common/YClassifyManage.vue'], resolve)
-                },
-                {
-                    // 地址管理
-                    path: '/addressManage',
-                    component: resolve => require(['../components/common/YAddressManage.vue'], resolve)
-                },
-                {
-                    // 二手房
-                    path: '/AddSecondHouse',
-                    component: resolve => require(['../components/common/YAddSecondHouse.vue'], resolve)
-                },
-                {
-                    // 二手小区房
-                    path: '/addSecondAreaHouse',
-                    component: resolve => require(['../components/common/YAddSecondAreaHouse.vue'], resolve)
-                },
-                {
-                    // 新房
-                    path: '/AddNewHouse',
-                    component: resolve => require(['../components/common/YAddNewHouse.vue'], resolve)
-                },
-                {
-                    // 新户型
-                    path: '/AddNewType',
-                    component: resolve => require(['../components/common/YAddNewType.vue'], resolve)
-                },
-                {
-                    // 租房
-                    path: '/AddRentHouse',
-                    component: resolve => require(['../components/common/YAddRent.vue'], resolve)
-                },
-            ]
-        },
-        {
-            // 惠州房源管理
-            path: '/HZHouse',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
-            children: [
-                {
-                    // 房源管理
-                    path: '/houseManage',
-                    component: resolve => require(['../components/common/YClassifyManage.vue'], resolve)
-                },
-                {
-                    // 地址管理
-                    path: '/addressManage',
-                    component: resolve => require(['../components/common/YAddressManage.vue'], resolve)
-                },
-                {
-                    // 二手房
-                    path: '/AddSecondHouse',
-                    component: resolve => require(['../components/common/YAddSecondHouse.vue'], resolve)
-                },
-                {
-                    // 二手小区房
-                    path: '/addSecondAreaHouse',
-                    component: resolve => require(['../components/common/YAddSecondAreaHouse.vue'], resolve)
-                },
-                {
-                    // 新房
-                    path: '/AddNewHouse',
-                    component: resolve => require(['../components/common/YAddNewHouse.vue'], resolve)
-                },
-                {
-                    // 新户型
-                    path: '/AddNewType',
-                    component: resolve => require(['../components/common/YAddNewType.vue'], resolve)
-                },
-                {
-                    // 租房
-                    path: '/AddRentHouse',
-                    component: resolve => require(['../components/common/YAddRent.vue'], resolve)
-                },
-            ]
-        },
-        {
-            // 中山房源管理
-            path: '/ZSHouse',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
-            children: [
-                {
-                    // 房源管理
-                    path: '/houseManage',
-                    component: resolve => require(['../components/common/YClassifyManage.vue'], resolve)
-                },
-                {
-                    // 地址管理
-                    path: '/addressManage',
-                    component: resolve => require(['../components/common/YAddressManage.vue'], resolve)
-                },
-                {
-                    // 二手房
-                    path: '/AddSecondHouse',
-                    component: resolve => require(['../components/common/YAddSecondHouse.vue'], resolve)
-                },
-                {
-                    // 二手小区房
-                    path: '/addSecondAreaHouse',
-                    component: resolve => require(['../components/common/YAddSecondAreaHouse.vue'], resolve)
-                },
-                {
-                    // 新房
-                    path: '/AddNewHouse',
-                    component: resolve => require(['../components/common/YAddNewHouse.vue'], resolve)
-                },
-                {
-                    // 新户型
-                    path: '/AddNewType',
-                    component: resolve => require(['../components/common/YAddNewType.vue'], resolve)
-                },
-                {
-                    // 租房
-                    path: '/AddRentHouse',
-                    component: resolve => require(['../components/common/YAddRent.vue'], resolve)
-                },
-            ]
-        },
+
         {
             path: '/login',
             component: resolve => require(['../components/page/YLogin.vue'], resolve)
@@ -202,7 +106,7 @@ export default new Router({
         {
             // 留言管理
             path: '/LeaveMsg',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
+            component: resolve => require(['../components/common/YHome.vue'], resolve),
             children: [
                 {
                     // 管理
@@ -214,7 +118,7 @@ export default new Router({
         {
             // 配置管理
             path: '/ConfigManage',
-            component: resolve => require(['../components/common/Home.vue'], resolve),
+            component: resolve => require(['../components/common/YHome.vue'], resolve),
             children: [
                 {
                     // 管理

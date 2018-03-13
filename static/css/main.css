@@ -109,3 +109,6 @@ a{text-decoration: none}
 .editor-btn{
     margin-top: 20px;
 }
+.el-col {
+    margin-right: 10px;
+}
