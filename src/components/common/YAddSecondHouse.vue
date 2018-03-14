@@ -3,9 +3,9 @@
         <bread-nav></bread-nav>
         <el-form ref="form" :model="form" label-width="120px" class="form-bg">
             <el-form-item label="所属分类：">
-                <el-select size="small" placeholder="请选择房源">
-                    <el-option label="深圳二手房源"></el-option>
-                    <el-option label="深圳二手学区房"></el-option>
+                <el-select size="small" v-model="form.region" placeholder="请选择房源">
+                    <el-option label="深圳二手房源" value="shanghai"></el-option>
+                    <el-option label="深圳二手学区房" value="shanghai"></el-option>
                 </el-select>
             </el-form-item>
             <middle-man></middle-man>
