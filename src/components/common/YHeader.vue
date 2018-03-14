@@ -4,6 +4,7 @@
         <div class="logo">后台管理系统</div>
         <div class="user-info">
             <screen-full class="screen-full"></screen-full>
+
             <el-dropdown trigger="click" @command="handleCommand">
                 <span class="el-dropdown-link">
                     <img class="user-logo" src="../../../static/img/img.jpg">
@@ -67,7 +68,7 @@
 
     .user-info {
         float: right;
-        padding-right: 50px;
+        padding-right: 15px;
         font-size: 16px;
         color: #fff;
     }
@@ -95,6 +96,6 @@
     }
     .screen-full{
         position: absolute;
-        right: 150px;
+        right: 160px;
     }
 </style>
