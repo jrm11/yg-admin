@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 Vue.use(Router);
-const home = resolve => require(['../components/common/YHome.vue'], resolve);
+const home = resolve => require(['../components/page/YHome.vue'], resolve);
 const readme = resolve => require(['../components/page/YReadme.vue'], resolve);
 const infoColManage = resolve => require(['../components/page/YInfoManage/YInfoColManage.vue'], resolve)
 const infoContentManage = resolve => require(['../components/page/YInfoManage/YInfoContentManage.vue'], resolve)
@@ -15,7 +15,7 @@ const addNewHouse = resolve => require(['../components/common/YAddNewHouse.vue']
 const addNewType = resolve => require(['../components/common/YAddNewType.vue'], resolve)
 const addRent = resolve => require(['../components/common/YAddRent.vue'], resolve)
 const login = resolve => require(['../components/page/YLogin.vue'], resolve)
-const leaveMsgManage = resolve => require(['../components/page/YMsgManage/YLeaveMsgManage.vue'], resolve)
+const leaveMsgManage = resolve => require(['../components/page/YMsgManage/YLeaveMsgList.vue'], resolve)
 const rentList = resolve => require(['../components/common/YRentList.vue'], resolve)
 const secondAreaHouseList = resolve => require(['../components/common/YSecondAreaHouseList.vue'], resolve)
 const secondHouseList = resolve => require(['../components/common/YSecondHouseList.vue'], resolve)

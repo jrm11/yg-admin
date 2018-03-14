@@ -122,8 +122,8 @@
     }
 </script>
 <style lang="scss" scoped rel="stylesheet/scss">
-    @import "../../assets/css/app.scss";
-    @import "../../assets/css/userManager.scss";
+    @import "../../../assets/css/app.scss";
+    @import "../../../assets/css/userManager.scss";
 
     .userManager-c {
         margin: 0 100px;
