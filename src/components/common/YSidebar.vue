@@ -215,7 +215,7 @@
                                 title: '新房源信息列表'
                             },
                             {
-                                index: 'ZSRentHouseList',
+                                index: 'ZSRentList',
                                 title: '租房信息列表'
                             }
                         ]

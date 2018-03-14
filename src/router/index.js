@@ -16,6 +16,11 @@ const addNewType = resolve => require(['../components/common/YAddNewType.vue'], 
 const addRent = resolve => require(['../components/common/YAddRent.vue'], resolve)
 const login = resolve => require(['../components/page/YLogin.vue'], resolve)
 const leaveMsgManage = resolve => require(['../components/page/YMsgManage/YLeaveMsgManage.vue'], resolve)
+const rentList = resolve => require(['../components/common/YRentList.vue'], resolve)
+const secondAreaHouseList = resolve => require(['../components/common/YSecondAreaHouseList.vue'], resolve)
+const secondHouseList = resolve => require(['../components/common/YSecondHouseList.vue'], resolve)
+const secondSchoolHouseList = resolve => require(['../components/common/YSecondSchoolHouseList.vue'], resolve)
+const newHouseList = resolve => require(['../components/common/TNewHouseList.vue'], resolve)
 const baseConfigManage = resolve => require(['../components/page/YConfigManage/YBaseConfigManage.vue'], resolve)
 export default new Router({
     routes: [
@@ -42,7 +47,6 @@ export default new Router({
             ]
         },
         {
-            // 深圳房源管理
             path: '/AddData',
             component: home,
             children: [
@@ -96,7 +100,6 @@ export default new Router({
                 },
             ]
         },
-
         {
             // 深圳房源管理
             path: '/SZHouse',
@@ -120,50 +123,231 @@ export default new Router({
                 },
                 {
                     // 二手房
-                    path: '/AddSecondHouse',
-                    component: addSecondHouse,
+                    path: '/SZSecondHouseList',
+                    component:secondHouseList,
                     meta: {
-                        title: "添加二手房信息"
+                        title: "二手房列表"
                     }
                 },
                 {
                     // 二手小区房
-                    path: '/AddSecondAreaHouse',
-                    component: addSecondAreaHouse,
+                    path: '/SZSecondAreaHouseList',
+                    component: secondAreaHouseList,
                     meta: {
-                        title: "添加二手小区房信息"
+                        title: "二手小区房列表"
                     }
                 },
                 {
                     // 二手学区房
-                    path: '/AddSecondSchoolHouse',
-                    component: addSecondSchoolDistrictHouse,
+                    path: '/SZSecondSchoolHouseList',
+                    component:secondSchoolHouseList ,
                     meta: {
-                        title: "添加二手学区房信息"
+                        title: "二手学区房列表"
                     }
                 },
                 {
                     // 新房
-                    path: '/AddNewHouse',
-                    component: addNewHouse,
+                    path: '/SZNewHouseList',
+                    component: newHouseList,
                     meta: {
-                        title: "添加新房信息"
+                        title: "新房列表"
                     }
                 },
                 {
                     // 新户型
-                    path: '/AddNewType',
-                    component: addNewType,
+                    path: '/SZRentList',
+                    component: rentList,
                     meta: {
-                        title: "添加新户型信息"
+                        title: "租房列表"
+                    }
+                },
+            ]
+        },
+        {
+            // 深圳房源管理
+            path: '/DGHouse',
+            component: home,
+            children: [
+                {
+                    // 房源管理
+                    path: '/DGHouseManage',
+                    component: classifyManage,
+                    meta: {
+                        title: "房源管理"
                     }
                 },
                 {
-                    // 租房
-                    path: '/AddRentHouse',
-                    component: addRent,
+                    // 地址管理
+                    path: '/DGAddressManage',
+                    component: addressManage,
                     meta: {
-                        title: "添加租房信息"
+                        title: "地址管理"
+                    }
+                },
+                {
+                    // 二手房
+                    path: '/DGSecondHouseList',
+                    component: secondHouseList,
+                    meta: {
+                        title: "二手房列表"
+                    }
+                },
+                {
+                    // 二手小区房
+                    path: '/DGSecondAreaHouseList',
+                    component: secondAreaHouseList,
+                    meta: {
+                        title: "二手小区房列表"
+                    }
+                },
+                {
+                    // 二手学区房
+                    path: '/DGSecondSchoolHouseList',
+                    component:secondSchoolHouseList ,
+                    meta: {
+                        title: "二手学区房列表"
+                    }
+                },
+                {
+                    // 新房
+                    path: '/DGNewHouseList',
+                    component: newHouseList,
+                    meta: {
+                        title: "新房列表"
+                    }
+                },
+                {
+                    // 新户型
+                    path: '/DGRentList',
+                    component: rentList,
+                    meta: {
+                        title: "租房列表"
+                    }
+                },
+            ]
+        },
+        {
+            // 深圳房源管理
+            path: '/HZHouse',
+            component: home,
+            children: [
+                {
+                    // 房源管理
+                    path: '/HZHouseManage',
+                    component: classifyManage,
+                    meta: {
+                        title: "房源管理"
+                    }
+                },
+                {
+                    // 地址管理
+                    path: '/HZAddressManage',
+                    component: addressManage,
+                    meta: {
+                        title: "地址管理"
+                    }
+                },
+                {
+                    // 二手房
+                    path: '/HZSecondHouseList',
+                    component: secondHouseList,
+                    meta: {
+                        title: "二手房列表"
+                    }
+                },
+                {
+                    // 二手小区房
+                    path: '/HZSecondAreaHouseList',
+                    component: secondAreaHouseList,
+                    meta: {
+                        title: "二手小区房列表"
+                    }
+                },
+                {
+                    // 二手学区房
+                    path: '/HZSecondSchoolHouseList',
+                    component:secondSchoolHouseList ,
+                    meta: {
+                        title: "二手学区房列表"
+                    }
+                },
+                {
+                    // 新房
+                    path: '/HZNewHouseList',
+                    component: newHouseList,
+                    meta: {
+                        title: "新房列表"
+                    }
+                },
+                {
+                    // 新户型
+                    path: '/HZRentList',
+                    component: rentList,
+                    meta: {
+                        title: "租房列表"
+                    }
+                },
+            ]
+        },
+        {
+            // 深圳房源管理
+            path: '/ZSHouse',
+            component: home,
+            children: [
+                {
+                    // 房源管理
+                    path: '/ZSHouseManage',
+                    component: classifyManage,
+                    meta: {
+                        title: "房源管理"
+                    }
+                },
+                {
+                    // 地址管理
+                    path: '/ZSAddressManage',
+                    component: addressManage,
+                    meta: {
+                        title: "地址管理"
+                    }
+                },
+                {
+                    // 二手房
+                    path: '/ZSSecondHouseList',
+                    component: secondHouseList,
+                    meta: {
+                        title: "二手房列表"
+                    }
+                },
+                {
+                    // 二手小区房
+                    path: '/ZSSecondAreaHouseList',
+                    component: secondAreaHouseList,
+                    meta: {
+                        title: "二手小区房列表"
+                    }
+                },
+                {
+                    // 二手学区房
+                    path: '/ZSSecondSchoolHouseList',
+                    component:secondSchoolHouseList ,
+                    meta: {
+                        title: "二手学区房列表"
+                    }
+                },
+                {
+                    // 新房
+                    path: '/ZSNewHouseList',
+                    component: newHouseList,
+                    meta: {
+                        title: "新房列表"
+                    }
+                },
+                {
+                    // 新户型
+                    path: '/ZSRentList',
+                    component: rentList,
+                    meta: {
+                        title: "租房列表"
                     }
                 },
             ]
