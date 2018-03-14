@@ -15,10 +15,16 @@
                 </el-col>
             </el-form-item>
             <house-info>
+                <div slot="price">
+                    <el-radio size="small" v-model="radio2" border v-for="(item,index)  in priceList" :label="item"
+                              :key="index">{{item}}
+                    </el-radio>
+                </div>
                 <div slot="chk">
                     <el-radio size="small" v-model="radio4" border v-for="(item,index)  in houseTypeList" :label="item"
                               :key="index">{{item}}</el-radio>
                 </div>
+
             </house-info>
             <el-form-item label="小区名称：">
                 <el-col :span="6">
@@ -211,6 +217,7 @@
 </template>
 
 <script>
+    const list = ["1000元以下", "1000-2000元", "2000-3000元", "3000-4000元", "4000-5000元", "5000-6000元", "6000元以上"];
     import breadNav from './YBread'
     import houseInfo from './YHouseInfo'
     import {quillEditor} from 'vue-quill-editor'
@@ -230,6 +237,8 @@
                     resource: '',
                     desc: ''
                 },
+                radio2: '2',
+                priceList:list,
                 content: '',
                 editorOption: {},
                 radio7: '1',

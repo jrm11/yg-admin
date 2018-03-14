@@ -22,6 +22,11 @@
                 </el-col>
             </el-form-item>
             <house-info>
+                <div slot="price">
+                    <el-radio size="small" v-model="radio2" border v-for="(item,index)  in priceList" :label="item"
+                              :key="index">{{item}}
+                    </el-radio>
+                </div>
                 <div slot="chk">
                     <el-radio size="small" v-model="radio4" border v-for="(item,index)  in houseTypeList" :label="item"
                               :key="index"></el-radio>
@@ -110,7 +115,8 @@
     import {quillEditor} from 'vue-quill-editor'
     import middleMan from './YMiddleman'
     import baseInfo from './YBaseInfo'
-
+    const priceList= ["50万以下", "50-100万元", "100-150万元", "150-200万元", "200万以上"];
+    const houseTypeList= ["一室", "两室", "三室", "四室", "五室", "别墅"];
     export default {
         data() {
             return {
@@ -127,7 +133,9 @@
                 content: '',
                 editorOption: {},
                 radio4: '4',
-                houseTypeList: ["一室", "两室", "三室", "四室", "五室", "别墅"],
+                radio2: '2',
+                houseTypeList: houseTypeList,
+                priceList:priceList
 
             }
         },
