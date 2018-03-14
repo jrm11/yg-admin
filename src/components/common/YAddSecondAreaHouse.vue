@@ -14,7 +14,12 @@
                     <el-input size="small" placeholder="请输入房源名称"></el-input>
                 </el-col>
             </el-form-item>
-            <house-info></house-info>
+            <house-info>
+                <div slot="chk">
+                    <el-radio size="small" v-model="radio4" border v-for="(item,index)  in houseTypeList" :label="item"
+                              :key="index"></el-radio>
+                </div>
+            </house-info>
             <el-form-item label="小区名称：">
                 <el-col :span="6">
                     <el-input size="small" placeholder="请输入小区名称"></el-input>
@@ -147,7 +152,9 @@
                     desc: ''
                 },
                 content: '',
-                editorOption: {}
+                editorOption: {},
+                radio4: '4',
+                houseTypeList: ["一室", "两室", "三室", "四室", "五室", "别墅"],
             }
         },
         components: {

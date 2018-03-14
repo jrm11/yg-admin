@@ -14,7 +14,14 @@
                     <el-input size="small" placeholder="请输入房源名称"></el-input>
                 </el-col>
             </el-form-item>
-            <house-info></house-info>
+            <house-info>
+                <div slot="chk">
+                    <el-checkbox-group
+                            v-model="checkedList">
+                        <el-checkbox  size="small" v-for="item in houseTypeList" :label="item" :key="item" border>{{item}}</el-checkbox>
+                    </el-checkbox-group>
+                </div>
+            </house-info>
             <el-form-item label="小区名称：">
                 <el-col :span="6">
                     <p class="item-p">楼盘名称：</p>
@@ -136,6 +143,7 @@
     import middleMan from './YMiddleman'
     import baseInfo from './YBaseInfo'
 
+    const list= ["一室", "两室", "三室", "四室", "五室", "别墅"];
     export default {
         data() {
             return {
@@ -150,7 +158,10 @@
                     desc: ''
                 },
                 content: '',
-                editorOption: {}
+                editorOption: {},
+                radio4: '4',
+                checkedList: [],
+                houseTypeList: list
             }
         },
         components: {

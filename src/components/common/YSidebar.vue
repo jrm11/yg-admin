@@ -206,6 +206,12 @@
                         icon: 'fa fa-commenting',
                         index: 'LeaveMsg',
                         title: '留言管理',
+                        subs: [
+                            {
+                                index: 'msgList',
+                                title: '留言列表'
+                            }
+                        ]
                     },
                     {
                         icon: 'fa fa-cog',

@@ -110,7 +110,7 @@ export default new Router({
             children: [
                 {
                     // 管理
-                    path: '/MsgManage',
+                    path: '/msgList',
                     component: resolve => require(['../components/page/YMsgManage/YLeaveMsgManage.vue'], resolve)
                 }
             ]

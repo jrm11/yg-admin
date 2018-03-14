@@ -8,14 +8,18 @@
                 </el-select>
             </el-form-item>
 
-
             <middle-man></middle-man>
             <el-form-item label="房源名称：">
                 <el-col :span="6">
                     <el-input size="small" placeholder="请输入房源名称"></el-input>
                 </el-col>
             </el-form-item>
-            <house-info></house-info>
+            <house-info>
+                <div slot="chk">
+                    <el-radio size="small" v-model="radio4" border v-for="(item,index)  in houseTypeList" :label="item"
+                              :key="index">{{item}}</el-radio>
+                </div>
+            </house-info>
             <el-form-item label="小区名称：">
                 <el-col :span="6">
                     <el-input size="small" placeholder="请输入小区名称"></el-input>
@@ -86,120 +90,92 @@
             </el-form-item>
 
             <el-form-item label="房屋配置：">
-                <el-row>
-                    <el-col :span="6">
-                        <el-form-item label="电梯：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
+                <el-row >
+                    <el-col :span="6" v-for="(item ,index) in labelList" :key="index">
+                        <el-form-item :label="item.label">
+                            <el-radio size="small" v-model="item.radio" label="1" border>有</el-radio>
+                            <el-radio size="small" v-model="item.radio" label="2" border>无</el-radio>
                         </el-form-item>
                     </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="空调：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="冰箱：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="洗衣机：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="热水器：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="燃气灶：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="床：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="沙发：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="餐桌：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="空调：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="冰箱：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="洗衣机：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="热水器：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="燃气灶：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="床：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="沙发：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="餐桌：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
 
-                    <el-col :span="6">
-                        <el-form-item label="衣柜：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="电视：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="抽油烟机：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="橱柜：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
-                    <el-col :span="6">
-                        <el-form-item label="马桶：">
-                            <el-radio-group>
-                                <el-radio size="small" border label="">有</el-radio>
-                                <el-radio size="small" border label="">无</el-radio>
-                            </el-radio-group>
-                        </el-form-item>
-                    </el-col>
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="衣柜：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="电视：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="抽油烟机：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="橱柜：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
+                    <!--<el-col :span="6">-->
+                    <!--<el-form-item label="马桶：">-->
+                    <!--<el-radio size="small" v-model="radio7" label="1" border>有</el-radio>-->
+                    <!--<el-radio size="small" v-model="radio7" label="2" border>无</el-radio>-->
+                    <!--</el-form-item>-->
+                    <!--</el-col>-->
                 </el-row>
             </el-form-item>
 
@@ -255,7 +231,54 @@
                     desc: ''
                 },
                 content: '',
-                editorOption: {}
+                editorOption: {},
+                radio7: '1',
+                labelList: [
+                    {
+                        label: "电梯：",
+                        radio: "1"
+                    },{
+                        label: "空调：",
+                        radio: "2"
+                    }, {
+                        label: "冰箱：",
+                        radio: "3"
+                    }, {
+                        label: "洗衣机：",
+                        radio: "4"
+                    }, {
+                        label: "热水器：",
+                        radio: "5"
+                    }, {
+                        label: "燃气灶：",
+                        radio: "6"
+                    }, {
+                        label: "床：",
+                        radio: "7"
+                    }, {
+                        label: "沙发：",
+                        radio: "8"
+                    }, {
+                        label: "餐桌：",
+                        radio: "9"
+                    }, {
+                        label: "衣柜：",
+                        radio: "10"
+                    }, {
+                        label: "电视：",
+                        radio: "11"
+                    }, {
+                        label: "抽油烟机：",
+                        radio: "12"
+                    }, {
+                        label: "橱柜：",
+                        radio: "13"
+                    }, {
+                        label: "马桶：",
+                        radio: "14"
+                    }],
+                radio4: '4',
+                houseTypeList: ["一室", "两室", "三室", "四室", "五室", "别墅"],
             }
         },
         components: {
