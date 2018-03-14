@@ -2,11 +2,7 @@
     <section>
         <bread-nav></bread-nav>
         <el-form ref="form" :model="form" label-width="120px" class="form-bg">
-            <el-form-item label="所属分类：">
-                <el-select size="small" v-model="form.region" placeholder="深圳租房">
-                    <el-option label="深圳租房" value="shanghai"></el-option>
-                </el-select>
-            </el-form-item>
+            <city-select></city-select>
 
             <middle-man></middle-man>
             <el-form-item label="房源名称：">
@@ -224,6 +220,7 @@
     import middleMan from './YMiddleman'
     import baseInfo from './YBaseInfo'
 
+    import citySelect from './YCity'
     export default {
         data() {
             return {
@@ -295,7 +292,7 @@
             quillEditor,
             houseInfo,
             middleMan,
-            baseInfo
+            baseInfo,citySelect
         },
         methods: {
             onSubmit() {

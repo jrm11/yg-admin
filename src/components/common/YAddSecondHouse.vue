@@ -2,12 +2,7 @@
     <section>
         <bread-nav></bread-nav>
         <el-form ref="form" :model="form" label-width="120px" class="form-bg">
-            <el-form-item label="所属分类：">
-                <el-select size="small" v-model="form.region" placeholder="请选择房源">
-                    <el-option label="深圳二手房源" value="shanghai"></el-option>
-                    <el-option label="深圳二手学区房" value="shanghai"></el-option>
-                </el-select>
-            </el-form-item>
+            <city-select></city-select>
             <middle-man></middle-man>
             <el-form-item label="房源名称：">
                 <el-col :span="6">
@@ -111,6 +106,7 @@
     import middleMan from './YMiddleman'
     import baseInfo from './YBaseInfo'
 
+    import citySelect from './YCity'
     const priceList= ["50万以下", "50-100万元", "100-150万元", "150-200万元", "200万以上"];
     const houseTypeList= ["一室", "两室", "三室", "四室", "五室", "别墅"];
     export default {
@@ -139,7 +135,7 @@
             quillEditor,
             houseInfo,
             middleMan,
-            baseInfo
+            baseInfo,citySelect
         },
         methods: {
             onSubmit() {

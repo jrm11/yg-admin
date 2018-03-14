@@ -13,7 +13,9 @@
                         <template slot="title"><i :class="item.icon"></i>{{ item.title }}</template>
                         <el-menu-item @click="click" v-for="(subItem,i) in item.subs" :key="i"
                                       :index="subItem.index">{{ subItem.title}}
+
                         </el-menu-item>
+
                     </el-submenu>
                 </template>
                 <template v-else>
@@ -22,6 +24,7 @@
                     </el-menu-item>
                 </template>
             </template>
+
         </el-menu>
     </div>
 </template>
@@ -47,28 +50,20 @@
                         ]
                     },
                     {
-                        icon: 'fa fa-tasks',
-                        index: 'SZHouse',
-                        title: '深圳房源管理',
+                        icon: 'fa fa-plus-square',
+                        index: 'AddData',
+                        title: '添加数据',
                         subs: [
                             {
-                                index: 'houseManage',
-                                title: '房源分类管理 '
-                            },
-                            {
-                                index: 'addressManage',
-                                title: '房源地址管理 '
-                            },
-                            {
                                 index: 'AddSecondHouse',
-                                title: '添加二手房源'
+                                title: '添加二手房源',
                             },
                             {
-                                index: 'addSecondAreaHouse',
+                                index: 'AddSecondAreaHouse',
                                 title: '添加二手小区房'
                             },
                             {
-                                index: 'addSecondSchoolHouse',
+                                index: 'AddSecondSchoolHouse',
                                 title: '添加二手学区房源'
                             },
                             {
@@ -82,6 +77,41 @@
                             {
                                 index: 'AddRentHouse',
                                 title: '添加租房房源'
+                            }
+                        ]
+                    },
+                    {
+                        icon: 'fa fa-tasks',
+                        index: 'SZHouse',
+                        title: '深圳房源管理',
+                        subs: [
+                            {
+                                index: 'SZHouseManage',
+                                title: '房源分类管理 '
+                            },
+                            {
+                                index: 'SZAddressManage',
+                                title: '房源地址管理 '
+                            },
+                            {
+                                index: 'SZSecondHouseList',
+                                title: '二手房源信息列表',
+                            },
+                            {
+                                index: 'SZSecondAreaHouseList',
+                                title: '二手房小区信息列表'
+                            },
+                            {
+                                index: 'SZSecondSchoolHouseList',
+                                title: '二手房学区信息列表'
+                            },
+                            {
+                                index: 'SZNewHouseList',
+                                title: '新房源信息列表'
+                            },
+                            {
+                                index: 'SZRentList',
+                                title: '租房信息列表'
                             }
                         ]
                     },
@@ -91,36 +121,32 @@
                         title: '东莞房源管理',
                         subs: [
                             {
-                                index: 'houseManage',
+                                index: 'DGHouseManage',
                                 title: '房源分类管理 '
                             },
                             {
-                                index: 'addressManage',
+                                index: 'DGAddressManage',
                                 title: '房源地址管理 '
                             },
                             {
-                                index: 'AddSecondHouse',
-                                title: '添加二手房源'
+                                index: 'DGSecondHouseList',
+                                title: '二手房源信息列表'
                             },
                             {
-                                index: 'addSecondAreaHouse',
-                                title: '添加二手小区房'
+                                index: 'DGSecondAreaHouseList',
+                                title: '二手房小区信息列表'
                             },
                             {
-                                index: 'addSecondSchoolHouse',
-                                title: '添加二手学区房源'
+                                index: 'DGSecondSchoolHouseList',
+                                title: '二手房学区信息列表'
                             },
                             {
-                                index: 'AddNewHouse',
-                                title: '添加新房源'
+                                index: 'DGNewHouseList',
+                                title: '新房源信息列表'
                             },
                             {
-                                index: 'AddNewType',
-                                title: '添加新户型'
-                            },
-                            {
-                                index: 'AddRentHouse',
-                                title: '添加租房房源'
+                                index: 'DGRentList',
+                                title: '租房信息列表'
                             }
                         ]
                     },
@@ -130,36 +156,32 @@
                         title: '惠州房源管理',
                         subs: [
                             {
-                                index: 'houseManage',
+                                index: 'HZHouseManage',
                                 title: '房源分类管理 '
                             },
                             {
-                                index: 'addressManage',
+                                index: 'HZAddressManage',
                                 title: '房源地址管理 '
                             },
                             {
-                                index: 'AddSecondHouse',
-                                title: '添加二手房源'
+                                index: 'HZSecondHouseList',
+                                title: '二手房源信息列表'
                             },
                             {
-                                index: 'addSecondAreaHouse',
-                                title: '添加二手小区房'
+                                index: 'HZSecondAreaHouseList',
+                                title: '二手小区房信息列表'
                             },
                             {
-                                index: 'addSecondSchoolHouse',
-                                title: '添加二手学区房源'
+                                index: 'HZSecondSchoolHouseList',
+                                title: '二手房学区信息列表'
                             },
                             {
-                                index: 'AddNewHouse',
-                                title: '添加新房源'
+                                index: 'HZNewHouseList',
+                                title: '新房源信息列表'
                             },
                             {
-                                index: 'AddNewType',
-                                title: '添加新户型'
-                            },
-                            {
-                                index: 'AddRentHouse',
-                                title: '添加租房房源'
+                                index: 'HZRentList',
+                                title: '租房信息列表'
                             }
                         ]
                     },
@@ -169,36 +191,32 @@
                         title: '中山房源管理',
                         subs: [
                             {
-                                index: 'houseManage',
+                                index: 'ZSHouseManage',
                                 title: '房源分类管理 '
                             },
                             {
-                                index: 'addressManage',
+                                index: 'ZSAddressManage',
                                 title: '房源地址管理 '
                             },
                             {
-                                index: 'AddSecondHouse',
-                                title: '添加二手房源'
+                                index: 'ZSSecondHouseList',
+                                title: '二手房源信息列表'
                             },
                             {
-                                index: 'addSecondAreaHouse',
-                                title: '添加二手小区房'
+                                index: 'ZSSecondAreaHouseList',
+                                title: '二手小区房信息列表'
                             },
                             {
-                                index: 'addSecondSchoolHouse',
-                                title: '添加二手学区房源'
+                                index: 'ZSSecondSchoolHouseList',
+                                title: '二手房学区信息列表'
                             },
                             {
-                                index: 'AddNewHouse',
-                                title: '添加新房源'
+                                index: 'ZSNewHouseList',
+                                title: '新房源信息列表'
                             },
                             {
-                                index: 'AddNewType',
-                                title: '添加新户型'
-                            },
-                            {
-                                index: 'AddRentHouse',
-                                title: '添加租房房源'
+                                index: 'ZSRentHouseList',
+                                title: '租房信息列表'
                             }
                         ]
                     },
