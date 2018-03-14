@@ -22,6 +22,7 @@ const secondHouseList = resolve => require(['../components/common/YSecondHouseLi
 const secondSchoolHouseList = resolve => require(['../components/common/YSecondSchoolHouseList.vue'], resolve)
 const newHouseList = resolve => require(['../components/common/TNewHouseList.vue'], resolve)
 const baseConfigManage = resolve => require(['../components/page/YConfigManage/YBaseConfigManage.vue'], resolve)
+const userList = resolve => require(['../components/page/YUserManage/YUserList.vue'], resolve)
 export default new Router({
     routes: [
         {
@@ -377,6 +378,18 @@ export default new Router({
                     // 管理
                     path: '/baseConfigManage',
                     component: baseConfigManage
+                }
+            ]
+        },
+        {
+            // 留言管理
+            path: '/userManage',
+            component: home,
+            children: [
+                {
+                    // 管理
+                    path: '/userList',
+                    component: userList
                 }
             ]
         },

@@ -64,6 +64,7 @@
         float: left;
         width: 200px;
         height: 100%;
+        font-size: 20px;
     }
 
     .user-info {

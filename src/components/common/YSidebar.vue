@@ -242,6 +242,17 @@
                             }
                         ]
                     },
+                    {
+                        icon: 'fa fa-user',
+                        index: 'userManage',
+                        title: '用户管理',
+                        subs: [
+                            {
+                                index: 'userList',
+                                title: '用户信息列表'
+                            }
+                        ]
+                    },
                 ]
             }
         },
