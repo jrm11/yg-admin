@@ -1,59 +1,60 @@
 <template>
     <section>
         <el-form-item label="房源区域：">
-            <el-radio-group size="small"> size="small">
-                <el-radio v-model="raido0" border v-for="(item,index)  in areaList" label="0" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small" v-model="radio0" border v-for="(item,index)  in areaList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
         <el-form-item label="地铁线路：">
-            <el-radio-group size="small">>
-                <el-radio v-model="raido1" border v-for="(item,index)  in metroList" label="1" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small" v-model="radio1" border v-for="(item,index)  in metroList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
         <el-form-item label="价格：">
-            <el-radio-group size="small">>
-                <el-radio v-model="raido2" border v-for="(item,index)  in priceList" label="2" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small" v-model="radio2" border v-for="(item,index)  in priceList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
         <el-form-item label="面积：">
-            <el-radio-group size="small">>
-                <el-radio v-model="raido3" border v-for="(item,index)  in acreageList" label="3" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small" v-model="radio3" border v-for="(item,index)  in acreageList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
 
         <el-form-item label="户型：">
-            <el-radio-group size="small">>
-                <el-radio v-model="raido4" border v-for="(item,index)  in houseTypeList" label="4" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small" v-model="radio4" border v-for="(item,index)  in houseTypeList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
 
         <el-form-item label="特色：">
-            <el-radio-group size="small">>
-                <el-radio  v-model="raido5" border v-for="(item,index)  in featureList" label="5" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small"  v-model="radio5" border v-for="(item,index)  in featureList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
 
         <el-form-item label="楼层：">
-            <el-radio-group size="small">>
-                <el-radio v-model="raido6" border v-for="(item,index)  in floorList" label="6" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small" v-model="radio6" border v-for="(item,index)  in floorList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
 
         <el-form-item label="朝向：">
-            <el-radio-group size="small">>
-                <el-radio v-model="raido7" border v-for="(item,index)  in orientationsList" label="7" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small" v-model="radio7" border v-for="(item,index)  in orientationsList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
         <el-form-item label="装修：">
-            <el-radio-group size="small">>
-                <el-radio v-model="raido8" border v-for="(item,index)  in decorationList" label="" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div>
+                <el-radio size="small" v-model="radio8" border v-for="(item,index)  in decorationList":label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
         <el-form-item label="房龄：">
-            <el-radio-group size="small">>
-                <el-radio v-model="raido9" border v-for="(item,index)  in houseAgeList" label="" :key="index">{{item}}</el-radio>
-            </el-radio-group>
+            <div >
+                <el-radio size="small" v-model="radio9" border v-for="(item,index)  in houseAgeList" :label="item" :key="index"></el-radio>
+            </div>
         </el-form-item>
+        
     </section>
 </template>
 
@@ -71,16 +72,16 @@
                 orientationsList: ["东", "西", "南", "北", "南北"],
                 decorationList: ["毛胚", "普通装修", "精装修", "豪华装修"],
                 houseAgeList: ["5年内", "5-10年", "10-20年", "20年以上"],
-                raido0:'0',
-                raido1:'1',
-                raido2:'2',
-                raido3:'3',
-                raido4:'4',
-                raido5:'5',
-                raido6:'6',
-                raido7:'7',
-                raido8:'8',
-                raido9:'9',
+                radio0:'0',
+                radio1:'1',
+                radio2:'2',
+                radio3:'3',
+                radio4:'4',
+                radio5:'5',
+                radio6:'6',
+                radio7:'7',
+                radio8:'8',
+                radio9:'9'
             }
         }
     }
