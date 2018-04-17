@@ -16,9 +16,10 @@
             <slot name="price"></slot>
         </el-form-item>
         <el-form-item label="面积：">
-            <el-radio size="small" v-model="radio3" border v-for="(item,index)  in acreageList" :label="item"
-                      :key="index">{{item}}
-            </el-radio>
+            <!--<el-checkbox size="small" v-model="radio3" border v-for="(item,index)  in acreageList" :label="item"-->
+                      <!--:key="index">{{item}}-->
+            <!--</el-checkbox>-->
+            <slot name="acreage"></slot>
         </el-form-item>
 
         <el-form-item label="户型：">
@@ -26,12 +27,10 @@
         </el-form-item>
 
         <el-form-item label="特色：">
-            <el-checkbox-group
-                    v-model="checkedList">
-                <el-checkbox size="small" v-model="radio5" border v-for="(item,index)  in featureList" :label="item"
-                             :key="index">{{item}}
-                </el-checkbox>
-            </el-checkbox-group>
+                <!--<el-checkbox size="small" v-model="radio5" border v-for="(item,index)  in featureList" :label="item"-->
+                             <!--:key="index">{{item}}-->
+                <!--</el-checkbox>-->
+            <slot name="feature"></slot>
         </el-form-item>
 
         <el-form-item label="楼层：">
@@ -44,9 +43,10 @@
 
         <el-form-item label="朝向：">
 
-            <el-radio size="small" v-model="radio7" border v-for="(item,index)  in orientationsList" :label="item"
-                      :key="index">{{item}}
-            </el-radio>
+            <!--<el-checkbox size="small" v-model="radio7" border v-for="(item,index)  in orientationsList" :label="item"-->
+                      <!--:key="index">{{item}}-->
+            <!--</el-checkbox>-->
+            <slot name="orientations"></slot>
 
         </el-form-item>
         <el-form-item label="装修：">
@@ -64,7 +64,7 @@
         </el-form-item>
 
     </section>
-</template>
+</template>.
 
 <script>
     const areaList = ["南山", "福田", "罗湖", "宝安", "龙岗", "龙华新区", "光明新区", "盐田", "坪山新区", "大鹏新区"];

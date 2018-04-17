@@ -10,15 +10,38 @@
                 </el-col>
             </el-form-item>
             <house-info>
-                <div slot="price">
-                    <el-radio size="small" v-model="radio2" border v-for="(item,index)  in priceList" :label="item"
-                              :key="index">{{item}}
-                    </el-radio>
-                </div>
-                <div slot="chk">
-                    <el-radio size="small" v-model="radio4" border v-for="(item,index)  in houseTypeList" :label="item"
-                              :key="index"></el-radio>
-                </div>
+                <!--价格-->
+                <el-checkbox-group slot="price" v-model="radio2">
+                    <el-checkbox size="small"  border v-for="(item,index)  in priceList" :label="item"
+                                 :key="index">{{item}}
+                    </el-checkbox>
+                </el-checkbox-group>
+                <!--面积-->
+                <el-checkbox-group slot="acreage" v-model="radio3">
+                    <el-checkbox size="small"  border v-for="(item,index)  in acreageList" :label="item"
+                                 :key="index">{{item}}
+                    </el-checkbox>
+                </el-checkbox-group>
+                <!--户型-->
+                <el-checkbox-group slot="chk" v-model="radio4">
+                    <el-checkbox size="small"  border v-for="(item,index)  in houseTypeList" :label="item"
+                                 :key="index">{{item}}
+                    </el-checkbox>
+                </el-checkbox-group>
+                <!--特色-->
+                <el-checkbox-group slot="feature" v-model="radio5">
+                    <el-checkbox size="small"  border v-for="(item,index)  in featureList" :label="item"
+                                 :key="index">{{item}}
+                    </el-checkbox>
+                </el-checkbox-group>
+                <!--朝向-->
+                <el-checkbox-group slot="orientations" v-model="radio7">
+                    <el-checkbox size="small"  border v-for="(item,index)  in orientationsList"
+                                 :label="item"
+                                 :key="index">{{item}}
+                    </el-checkbox>
+                </el-checkbox-group>
+
             </house-info>
             <el-form-item label="小区名称：">
                 <el-col :span="6">
@@ -30,11 +53,7 @@
                     <el-input size="small" placeholder="请输入详细地址"></el-input>
                 </el-col>
             </el-form-item>
-            <el-form-item label="房源编号：">
-                <el-col :span="6">
-                    <el-input size="small" placeholder="请输入房源编号"></el-input>
-                </el-col>
-            </el-form-item>
+
             <el-form-item label="参数：">
                 <el-row>
                     <el-col :span="6">
@@ -68,7 +87,7 @@
                 </el-row>
             </el-form-item>
 
-            <base-info></base-info>
+            <!--<base-info></base-info>-->
             <el-form-item label="小区简介：">
                 <el-col :span="12">
                     <quill-editor ref="myTextEditor"
@@ -95,6 +114,9 @@
             <el-form-item label="多图上传：">
                 <input type="file">
             </el-form-item>
+
+            <el-button type="primary">提交</el-button>
+            <el-button type="danger">取消</el-button>
         </el-form>
     </section>
 </template>
@@ -107,8 +129,12 @@
     import baseInfo from './YBaseInfo'
 
     import citySelect from './YCity'
-    const priceList= ["50万以下", "50-100万元", "100-150万元", "150-200万元", "200万以上"];
-    const houseTypeList= ["一室", "两室", "三室", "四室", "五室", "别墅"];
+
+    const priceList = ["50万以下", "50-100万元", "100-150万元", "150-200万元", "200万以上"];
+    const houseTypeList = ["一室", "两室", "三室", "四室", "五室", "别墅"];
+    const acreageList = ["50平方以下", "50-70平方", "70-90平方", "90-110平方", "110-130平方", "130-150平方", "150平方以上"];
+    const featureList = ["近地铁", "花园小区", "不限购", "全新楼盘", "不限购", "交通方便", "配套齐全", "学区房", "双地铁口", "周边旧改"];
+    const orientationsList = ["东", "西", "南", "北", "南北"];
     export default {
         data() {
             return {
@@ -124,10 +150,17 @@
                 },
                 content: '',
                 editorOption: {},
-                radio4: '4',
-                radio2: '2',
+                radio2: [],
+                radio3: [],
+                radio4: [],
+                radio5: [],
+                radio6: [],
+                radio7: [],
                 houseTypeList: houseTypeList,
-                priceList:priceList
+                priceList: priceList,
+                acreageList: acreageList,
+                featureList: featureList,
+                orientationsList: orientationsList,
             }
         },
         components: {
@@ -135,7 +168,7 @@
             quillEditor,
             houseInfo,
             middleMan,
-            baseInfo,citySelect
+            baseInfo, citySelect
         },
         methods: {
             onSubmit() {

@@ -35,15 +35,24 @@ export default new Router({
             children: [
                 {
                     path: '/',
-                    component: readme
+                    component: readme,
+                    meta: {
+                        title: "主页"
+                    }
                 },
                 {
                     path: '/infoCol',
-                    component: infoColManage
+                    component: infoColManage,
+                    meta: {
+                        title: "信息列表"
+                    }
                 },
                 {
                     path: '/infoColContent',
-                    component: infoContentManage
+                    component: infoContentManage,
+                    meta: {
+                        title: "栏目内容"
+                    }
                 }
             ]
         },
@@ -355,7 +364,10 @@ export default new Router({
         },
         {
             path: '/login',
-            component: login
+            component: login,
+            meta:{
+                title:"登录"
+            }
         },
         {
             // 留言管理
